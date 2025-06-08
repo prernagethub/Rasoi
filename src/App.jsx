@@ -4,8 +4,10 @@ import MainRoutes from "./routes/Mainroutes";
 function App() {
   return (
     <>
-      <Navbar />
-      <MainRoutes />
+      <div className="p-5 w-[80%] mx-auto font-thin">
+        <Navbar />
+        <MainRoutes />
+      </div>
     </>
   );
 }
