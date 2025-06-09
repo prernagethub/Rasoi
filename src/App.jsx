@@ -1,4 +1,5 @@
 import Navbar from "./Components/Navbar";
+import Mainroutes from "./routes/Mainroutes";
 import MainRoutes from "./routes/Mainroutes";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <div className="p-5 w-[80%] mx-auto font-thin">
         <Navbar />
-        <MainRoutes />
+        <Mainroutes/>
       </div>
     </>
   );
