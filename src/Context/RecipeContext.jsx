@@ -30,9 +30,11 @@ const Recipecontext = (props) => {
     },
   ]);
 
+  const [favroite, setFavroite] = useState();
+
   return (
     <>
-      <recipeContext.Provider value={{ data, setData }}>
+      <recipeContext.Provider value={{ data, setData, favroite, setFavroite }}>
         {props.children}
       </recipeContext.Provider>
     </>

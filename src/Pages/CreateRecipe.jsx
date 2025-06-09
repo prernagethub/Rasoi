@@ -16,9 +16,9 @@ const CreateRecipe = () => {
   } = useForm();
 
   const SubmitHandler = (FormData) => {
-    // console.log(recipe);
+    // console.log(FormData);
 
-    recipe.id = nanoid();
+    FormData.id = nanoid();
     const copydata = [...data, FormData];
     setData(copydata);
     toast.success(`${FormData.tittle} created successfully`);

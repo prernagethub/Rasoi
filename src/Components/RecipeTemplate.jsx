@@ -3,15 +3,15 @@ import { Link } from "react-router";
 
 const RecipeTemplate = ({ recipe }) => {
   const { id, image, chef, tittle, desc } = recipe;
-  console.log(tittle);
-  
+  // console.log(tittle);
+
   return (
     <div className="flex">
       <Link
-        to={`/recipes/details/${id}`}
+        to={`/details/${id}`}
         className="block w-56 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white text-black"
       >
-        <div className="">
+        <div>
           <img
             className="w-full h-50 object-cover transform hover:scale-110 transition-transform duration-600"
             src={image}
