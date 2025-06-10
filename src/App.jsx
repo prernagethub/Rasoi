@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="p-5 w-[80%] mx-auto font-thin">
         <Navbar />
-        <Mainroutes/>
+        <Mainroutes />
       </div>
     </>
   );
