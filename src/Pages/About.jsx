@@ -17,7 +17,10 @@ const About = () => {
         {/* Description Card */}
         <div className="bg-gray-900 rounded-2xl shadow-lg p-6 md:p-10 transition-transform duration-500 hover:scale-105 hover:shadow-yellow-600">
           <p className="text-gray-200 text-lg leading-relaxed">
-            At <span className="text-yellow-300 font-semibold">TastyTales</span>, we bring you mouth-watering recipes from around the world 🌍. Whether you're a beginner or a seasoned chef 👩‍🍳, our step-by-step guides will help you cook with confidence.
+            At <span className="text-yellow-300 font-semibold">TastyTales</span>
+            , we bring you mouth-watering recipes from around the world 🌍.
+            Whether you're a beginner or a seasoned chef 👩‍🍳, our step-by-step
+            guides will help you cook with confidence.
           </p>
           <p className="mt-4 text-gray-400">
             Our mission is simple — make cooking joyful, easy, and delicious 😋.
@@ -26,7 +29,9 @@ const About = () => {
 
         {/* Special Features */}
         <div>
-          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">✨ What We Offer</h2>
+          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">
+            ✨ What We Offer
+          </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
             {[
               "✅ Step-by-step recipes",
@@ -61,4 +66,3 @@ const About = () => {
 };
 
 export default About;
-
