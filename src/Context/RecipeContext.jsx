@@ -30,7 +30,10 @@ const Recipecontext = (props) => {
     },
   ]);
 
-  const [favroite, setFavroite] = useState();
+  const [favroite, setFavroite] = useState(() => {
+    const localFav = localStorage.getItem("fevourite");
+    return localFav ? JSON.parse(localFav) : [];
+  });
 
   return (
     <>

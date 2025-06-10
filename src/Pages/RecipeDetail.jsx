@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const RecipeDetail = () => {
   const navigate = useNavigate();
-  const { data, setData } = useContext(recipeContext);
+  const { data, setData, favroite, setFavroite } = useContext(recipeContext);
   const { id } = useParams();
   const recipe = data.find((r) => (r.id = id));
   // console.log(recipe);
@@ -22,6 +22,19 @@ const RecipeDetail = () => {
       category: recipe.category,
     },
   });
+
+  const isFavorite = favroite.find((item) => item.id == id);
+  const removeFromFavorite = () => {
+    const copyFavorite = favroite.filter((r) => r.id != id);
+    setFavroite(copyFavorite);
+    window.localStorage.setItem("favorite", JSON.stringify(copyFavorite));
+  };
+
+  const addToFavorite = () => {
+    const copyFavorite = [...favroite, recipe];
+    setFavroite(copyFavorite);
+    window.localStorage.setItem("favorite", JSON.stringify(copyFavorite));
+  };
 
   const SubmitHandler = (updatedRecipe) => {
     const i = data.findIndex((r) => r.id == id);
@@ -50,6 +63,21 @@ const RecipeDetail = () => {
         <small className="text-lg text-white font-semibold">
           Chef: {recipe.chef}
         </small>
+        {isFavorite ? (
+          <button
+            onClick={removeFromFavorite}
+            className="bg-red-500 font-semibold text-white px-4 py-2 rounded w-fit hover:bg-red-600"
+          >
+            🤍unFavourite
+          </button>
+        ) : (
+          <button
+            onClick={addToFavorite}
+            className="bg-green-500 font-semibold text-white px-4 py-2 rounded w-fit hover:bg-green-600"
+          >
+            ❤️ Favourites
+          </button>
+        )}
       </div>
       <div className="flex justify-center w-1/2  px-12">
         <form
