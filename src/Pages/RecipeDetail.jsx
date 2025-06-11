@@ -58,14 +58,14 @@ const RecipeDetail = () => {
   return (
     <div className="flex gap-20 ">
       <div className="lg:w-1/2 w-full flex flex-col gap-4">
-        <h1 className="text-4xl font-bold text-green-700">{recipe.tittle}</h1>
+        <h1 className="text-4xl font-bold text-amber-800">{recipe.title}</h1>
         <img
           className=" max-h-[400px] object-cover rounded-lg shadow"
           src={recipe.image}
           alt={recipe.tittle}
         />
         <small className="text-lg text-white font-semibold">
-          Chef: {recipe.chef}
+          👨‍🍳: {recipe.chef}
         </small>
         {isFavorite ? (
           <button
