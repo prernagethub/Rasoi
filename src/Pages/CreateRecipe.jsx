@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { recipeContext } from "../Context/Recipecontext";
+import { recipeContext } from "../Context/RecipeContext";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 

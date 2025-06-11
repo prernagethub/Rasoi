@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { recipeContext } from "../Context/Recipecontext";
+import { recipeContext } from "../Context/RecipeContext";
 import { useNavigate, useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";

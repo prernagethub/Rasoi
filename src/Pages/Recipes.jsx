@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { recipeContext } from "../Context/Recipecontext";
+import { recipeContext } from "../Context/RecipeContext";
 import RecipeTemplate from "../Components/RecipeTemplate";
 import { Link } from "react-router";
 
@@ -18,7 +18,9 @@ const Recipes = () => {
             ))}
           </div>
         ) : (
-          <div className="mt-8 ">No recipes found. Start by creating one! 🍽️</div>
+          <div className="mt-8 ">
+            No recipes found. Start by creating one! 🍽️
+          </div>
         )}
       </div>
 

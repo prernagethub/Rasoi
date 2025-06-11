@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { recipeContext } from "../Context/Recipecontext";
+import { recipeContext } from "../Context/RecipeContext";
 import RecipeTemplate from "../Components/RecipeTemplate";
 
 const Favorite = () => {

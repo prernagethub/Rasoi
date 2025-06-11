@@ -4,7 +4,7 @@ export const recipeContext = createContext(null);
 
 import React from "react";
 
-const Recipecontext = (props) => {
+const RecipeContext = (props) => {
   const defaultData = [
     {
       id: "recipe-001", // Normally generated using nanoid() or uuid
@@ -49,4 +49,4 @@ const Recipecontext = (props) => {
   );
 };
 
-export default Recipecontext;
+export default RecipeContext;
