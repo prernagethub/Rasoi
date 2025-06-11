@@ -21,6 +21,7 @@ const CreateRecipe = () => {
     FormData.id = nanoid();
     const copydata = [...data, FormData];
     setData(copydata);
+    window.localStorage.setItem("recipes", JSON.stringify(copydata));
     toast.success(`${FormData.tittle} created successfully`);
     reset();
     navigate(-1);

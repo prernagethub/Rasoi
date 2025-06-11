@@ -29,9 +29,9 @@ const Navbar = () => {
         </NavLink>
         <NavLink
           className={(e) => (e.isActive ? "text-amber-300" : "")}
-          to="/favroite"
+          to="/favorite"
         >
-          Favroite
+          Favorite
         </NavLink>
       </div>
     </div>

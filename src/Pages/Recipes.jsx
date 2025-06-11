@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Recipes = () => {
   const { data } = useContext(recipeContext);
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className="flex justify-between">
@@ -25,7 +25,7 @@ const Recipes = () => {
       <div>
         <Link
           className="bg-amber-50 text-black px-4 py-2 rounded-xl font-bold"
-          to="/Recipes/createRecipe"
+          to="/recipes/createRecipe"
         >
           + Create Recipe
         </Link>

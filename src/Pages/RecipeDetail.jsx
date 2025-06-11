@@ -6,9 +6,11 @@ import { toast } from "react-toastify";
 
 const RecipeDetail = () => {
   const navigate = useNavigate();
-  const { data, setData, favroite, setFavroite } = useContext(recipeContext);
+  const { data, setData, favorite, setFavorite } = useContext(recipeContext);
+  console.log(data);
+
   const { id } = useParams();
-  const recipe = data.find((r) => (r.id = id));
+  const recipe = data.find((r) => r.id == id);
   // console.log(recipe);
 
   const { register, handleSubmit, reset } = useForm({
@@ -23,23 +25,23 @@ const RecipeDetail = () => {
     },
   });
 
-  const isFavorite = favroite.find((item) => item.id == id);
+  const isFavorite = favorite.find((item) => item.id == id);
   const removeFromFavorite = () => {
-    const copyFavorite = favroite.filter((r) => r.id != id);
-    setFavroite(copyFavorite);
+    const copyFavorite = favorite.filter((r) => r.id != id);
+    setFavorite(copyFavorite);
     window.localStorage.setItem("favorite", JSON.stringify(copyFavorite));
   };
 
   const addToFavorite = () => {
-    const copyFavorite = [...favroite, recipe];
-    setFavroite(copyFavorite);
+    const copyFavorite = [...favorite, recipe];
+    setFavorite(copyFavorite);
     window.localStorage.setItem("favorite", JSON.stringify(copyFavorite));
   };
 
   const SubmitHandler = (updatedRecipe) => {
     const i = data.findIndex((r) => r.id == id);
     const copyData = [...data];
-    copyData[i] = { ...recipe, updatedRecipe };
+    copyData[i] = { ...recipe, ...updatedRecipe };
     setData(copyData);
     toast.success("Recipe updated");
     reset();
@@ -124,7 +126,7 @@ const RecipeDetail = () => {
             rows={3}
             {...register("desc")}
           />
-          <select className="mt-4 bg-transparent">
+          <select className="mt-4 bg-transparent" {...register("category")}>
             <option value="">Select Category</option>
             <option className="text-black" value="Breakfast">
               Breakfast
