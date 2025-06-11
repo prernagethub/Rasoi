@@ -16,7 +16,7 @@ const RecipeDetail = () => {
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       image: recipe.image,
-      tittle: recipe.tittle,
+      title: recipe.title,
       chef: recipe.chef,
       desc: recipe.desc,
       ingr: recipe.ingr,
@@ -24,6 +24,8 @@ const RecipeDetail = () => {
       category: recipe.category,
     },
   });
+
+  // console.log("Category:", recipe.category);
 
   const isFavorite = favorite.find((item) => item.id == id);
   const removeFromFavorite = () => {
@@ -95,8 +97,8 @@ const RecipeDetail = () => {
           />
           <input
             type="text"
-            placeholder="tittle"
-            {...register("tittle")}
+            placeholder="title"
+            {...register("title")}
             className="border-b outline-none mt-3 py-2"
           />
           <input

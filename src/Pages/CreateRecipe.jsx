@@ -41,8 +41,8 @@ const CreateRecipe = () => {
         />
         <input
           type="text"
-          placeholder="tittle"
-          {...register("tittle")}
+          placeholder="title"
+          {...register("title")}
           className="border-b outline-none mt-3 py-2"
         />
         <input
@@ -72,7 +72,7 @@ const CreateRecipe = () => {
           rows={3}
           {...register("desc")}
         />
-        <select className="mt-4 bg-transparent">
+        <select className="mt-4 bg-transparent" {...register("category")}>
           <option value="">Select Category</option>
           <option className="text-black" value="Breakfast">
             Breakfast

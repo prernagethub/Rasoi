@@ -9,16 +9,14 @@ const Favorite = () => {
   const Render = favorite.map((r) => <RecipeTemplate recipe={r} key={r.id} />);
 
   return (
-    <div className="p-6 mt-12 min-h-screen bg-zinc-800">
-      <h1 className="text-4xl font-bold text-center mb-8 text-orange-500">
-        Your Favourite Recipes
-      </h1>
+    <div className="p-6 mt-12 ">
+     
 
       {favorite.length > 0 ? (
         <div className="flex flex-wrap gap-4 justify-start">{Render}</div>
       ) : (
         <div>
-          <h1> You haven’t added any favourite recipes 🍽️ </h1>
+          <h1 className="mt-4 text-2xl font-semibold"> No favourite recipes... 🍽️ </h1>
         </div>
       )}
     </div>

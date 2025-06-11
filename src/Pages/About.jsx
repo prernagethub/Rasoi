@@ -2,63 +2,65 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="  text-gray-100 px-6 py-12 transition-all duration-700 ease-in-out overflow-y-hidden">
-      <div className="max-w-4xl mx-auto space-y-10 ">
+    <div className=" text-gray-200 px-6 py-16 transition-all duration-700 ease-in-out">
+      <div className="max-w-5xl mx-auto space-y-14">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 hover:scale-105 transition duration-300">
-            🍲 Welcome to Rasoi!
+          <h1 className="text-5xl md:text-6xl font-extrabold text-amber-50 drop-shadow-md transition-transform duration-300 hover:scale-105">
+            🍲 Welcome to Rasoi Ghar
           </h1>
-          <p className="mt-4 text-gray-300 text-lg md:text-xl">
-            A cozy corner of the internet for food lovers 🍕🍜🥗
+          <p className="mt-4 text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+            Your cozy kitchen corner for desi delights & creative cooking 🧂🥘
           </p>
         </div>
 
-        {/* Description Card */}
-        <div className="bg-gray-900 rounded-2xl shadow-lg p-6 md:p-10 transition-transform duration-500 hover:scale-105 hover:shadow-yellow-600">
-          <p className="text-gray-200 text-lg leading-relaxed">
-            At <span className="text-yellow-300 font-semibold">TastyTales</span>
-            , we bring you mouth-watering recipes from around the world 🌍.
-            Whether you're a beginner or a seasoned chef 👩‍🍳, our step-by-step
-            guides will help you cook with confidence.
+        {/* About Description */}
+        <div className="bg-[#1f1f1f] rounded-2xl shadow-md p-8 md:p-12 hover:shadow-orange-500/20 transition-shadow duration-500">
+          <p className="text-lg leading-relaxed">
+            <span className="text-orange-300 font-semibold">Rasoi Ghar</span> is
+            more than just a recipe app — it’s a place where tradition meets
+            innovation in the kitchen. Whether you’re new to cooking or a
+            seasoned pro, we’ve got something simmering for you.
           </p>
-          <p className="mt-4 text-gray-400">
-            Our mission is simple — make cooking joyful, easy, and delicious 😋.
+          <p className="mt-5 text-gray-500">
+            Discover recipes, create your own, and celebrate flavors that feel
+            like home. 🍛✨
           </p>
         </div>
 
-        {/* Special Features */}
+        {/* Features */}
         <div>
-          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">
-            ✨ What We Offer
+          <h2 className="text-3xl font-semibold text-amber-50 text-center mb-6">
+            🌟 Features You'll Love
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              "✅ Step-by-step recipes",
-              "📝 Custom recipe creation",
-              "👨‍👩‍👧‍👦 Family-friendly meals",
-              "📷 High-quality food images",
-              "🌱 Healthy options",
-              "🍰 Sweet dessert corner",
-            ].map((feature, i) => (
-              <li
-                key={i}
-                className="bg-gray-800 rounded-xl p-4 transition-all duration-300 hover:bg-yellow-50 hover:text-black"
+              "📖 Step-by-step guides",
+              "📝 Save your own recipes",
+
+              "📷 Visual previews",
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="bg-[#2a2a2a] hover:bg-[#333] transition-all duration-300 p-5 rounded-xl text-center text-md font-medium border border-transparent "
               >
                 {feature}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-10">
+        {/* CTA */}
+        <div className="text-center">
           <a
             href="/recipes"
-            className="inline-block px-6 py-3 bg-yellow-50 hover:bg-yellow-600 text-black text-lg font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-yellow-400"
+            className="inline-block px-7 py-3 bg-amber-100 hover:bg-amber-200 text-black font-bold text-lg rounded-full shadow-md transition-transform hover:scale-105 hover:shadow-orange-400/40"
           >
-            🍽️ Explore Recipes
+            🍽️ Start Exploring Recipes
           </a>
+          <p className="text-sm mt-3 text-gray-500">
+            No matter your skill level, you’re welcome in our Rasoi.
+          </p>
         </div>
       </div>
     </div>
